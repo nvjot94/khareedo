@@ -1,0 +1,140 @@
+<div class="container">
+  <form name="form1" method="post" novalidate ng-submit="validate(form1)">
+
+    <fieldset>
+
+      <!-- Form Name -->
+      <h4 translate="FinancialDetails">Financial Details</h4>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="AccountNo"></label>
+        <input type="text" placeholder="Account No" class="form-control" name="accountno" ng-model="accountno" required>
+        <span class="apperror" ng-show="form1.accountno.$touched && form1.accountno.$pristine && form1.accountno.$error.required">Account No can't be Empty</span>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="AccountType"></label>
+        <input type="text" placeholder="Account Type" class="form-control" name="accounttype" ng-model="accounttype" required>
+        <span class="apperror" ng-show="form1.accounttype.$touched && form1.accounttype.$pristine && form1.accounttype.$error.required">Account type can't be Empty</span>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label for="textinput" translate="AccountHolderName"></label>
+        <input type="text" placeholder="Account Holder Name" class="form-control" name="holdername" ng-model="holdername" required>
+        <span class="apperror" ng-show="form1.holdername.$touched && form1.holdername.$pristine && form1.holdername.$error.required">Account Holder Name can't be Empty</span>
+      </div>
+
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label for="textinput" translate="BankName"></label>
+        <input type="text" placeholder="Bank Name" class="form-control" name="bankname" ng-model="bankname" required>
+        <span class="apperror" ng-show="form1.bankname.$touched && form1.bankname.$pristine && form1.bankname.$error.required">Bank Name can't be Empty</span>
+      </div>
+
+      <!-- Text input -->
+      <div class="form-group">
+        <label for="textinput" translate="Branch"></label>
+        <input type="text" placeholder="Branch" class="form-control" name="branch" ng-model="branch" required>
+        <span class="apperror" ng-show="form1.branch.$touched && form1.branch.$pristine && form1.branch.$error.required">Branch can't be Empty</span>
+      </div>
+
+
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label for="textinput" translate="IFSCCode"></label>
+        <input type="text" placeholder="IFSC Code" class="form-control" name="ifsc" ng-model="ifsc" required>
+        <span class="apperror" ng-show="form1.ifsc.$touched && form1.ifsc.$pristine && form1.ifsc.$error.required">IFSC Code can't be Empty</span>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="pull-right">
+            <button type="reset" class="btn btn-default" translate="Reset"></button>
+            <button type="submit" class="btn btn-primary" translate="Next"></button>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+
+
+
+
+
+
+<!-- <div class="container">
+  <!--<h1>Result is {{result}}</h1>--<
+  <form name="form1" action="register" method="post" ng-submit="validate(form1)">
+
+    <fieldset>
+
+      <!-- Form Name --<
+      <h4 translate="FinancialDetails">Financial Details</h4>
+
+      <!-- Text input--<
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="AccountNo">Account No</label>
+        <input type="text" placeholder="Account No" class="form-control" name="accountno" ng-model="accountno" required>
+        <span class="apperror" ng-show="form1.accountno.$touched && form1.accountno.$pristine && form1.accountno.$error.required">Account No can't be Empty</span>
+      </div>
+
+      <!-- Text input--<
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="AccountType">Account Type</label>
+        <input type="text" placeholder="Account Type" class="form-control" name="accounttype" ng-model="accounttype" required>
+        <span class="apperror" ng-show="form1.accounttype.$touched && form1.accounttype.$pristine && form1.accounttype.$error.required">Account type can't be Empty</span>
+      </div>
+
+      <!-- Text input--<
+      <div class="form-group">
+        <label for="textinput" translate="AccountHolderName">Account Holder Name</label>
+        <input type="text" placeholder="Account Holder Name" class="form-control" name="holdername" ng-model="holdername" required>
+        <span class="apperror" ng-show="form1.holdername.$touched && form1.holdername.$pristine && form1.holdername.$error.required">Account Holder Name can't be Empty</span>
+      </div>
+
+
+      <!-- Text input--<
+      <div class="form-group">
+        <label for="textinput" translate="BankName">Bank Name</label>
+        <input type="text" placeholder="Bank Name" class="form-control" name="bankname" ng-model="bankname" required>
+        <span class="apperror" ng-show="form1.bankname.$touched && form1.bankname.$pristine && form1.bankname.$error.required">Bank Name can't be Empty</span>
+      </div>
+
+      <!-- Text input --<
+      <div class="form-group">
+        <label for="textinput" translate="Branch">Branch</label>
+        <input type="text" placeholder="Branch" class="form-control" name="branch" ng-model="branch" required>
+        <span class="apperror" ng-show="form1.branch.$touched && form1.branch.$pristine && form1.branch.$error.required">Branch can't be Empty</span>
+      </div>
+
+
+
+      <!-- Text input--<
+      <div class="form-group">
+        <label for="textinput" translate="IFSCCode">IFSC Code</label>
+        <input type="text" placeholder="IFSC Code" class="form-control" name="ifsc" ng-model="ifsc" required>
+        <span class="apperror" ng-show="form1.ifsc.$touched && form1.ifsc.$pristine && form1.ifsc.$error.required">IFSC Code can't be Empty</span>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="pull-right">
+            <button type="reset" class="btn btn-default" ng-click="clear()" translate="Reset">Reset</button>
+            <button type="submit" class="btn btn-primary" ng-click="next()" translate="Next">Next</button>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+<!-- /.col-lg-12 --<
+</div>
+<!-- /.row --< -->

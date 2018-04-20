@@ -1,0 +1,67 @@
+{
+    "_id": "5a76995b8c649c32dcc54681",
+    "name": "",
+    "description": "",
+    "logo": "",
+    "imagesurl": [
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "address": {
+        "line1": "",
+        "line2": "",
+        "city": "",
+        "state": "",
+        "country": "",
+        "zipcode": "",
+        "maplink": "",
+        "latitude": "",
+        "longitude": "",
+        "contactdetails": {
+            "mobile": [
+                "",
+                "",
+                ""
+            ],
+            "office": [
+                ""
+            ],
+            "fax": [
+                ""
+            ],
+            "email": [
+                ""
+            ]
+        }
+    },
+    "tagline": "",
+    "superuser": {
+        "name": "",
+        "phone": "",
+        "email": "",
+        "password": "",
+        "dateofbirth": ""
+    },
+    "financialdetails": {
+        "accountnumber": "",
+        "accounttype": "",
+        "holdername": "",
+        "bankname": "",
+        "branchname": "",
+        "ifsccode": ""
+    },
+    "carddetails": {
+        "cardtype": "",
+        "cardno": "",
+        "holdername": "",
+        "expirydate": "",
+        "cvv": "",
+        "cardprovider": "",
+        "bankname": "",
+        "branchname": "",
+        "ifsccode": ""
+    }
+}

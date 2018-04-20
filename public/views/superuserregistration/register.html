@@ -1,0 +1,162 @@
+<div class="container">
+    <form method="post" name="form1" ng-submit="validate(form1)">
+        <h4 translate="Create_Account"></h4>
+        <div class="form-group">
+            <label for="" translate="Name"></label>
+            <input type="text" class="form-control" name="name" ng-model="name" pattern="[A-Za-z]{1,50}([A-Za-z] ?)+" title="At least one lowercase,one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is optional"
+                required>
+            <span class="apperror" ng-show="form1.name.$touched &&  form1.name.$pristine && form1.name.$error.required">Name can't be Empty</span>
+            <span class="apperror" ng-show="form1.name.$touched && form1.name.$dirty && form1.name.$error.pattern ">At least one lowercase,one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace
+                is optional</span>
+        </div>
+        <!----------------------------------------------------Userid---------------------------------------------------------------->
+        <div class="form-group">
+            <label for="" translate="Userid"></label>
+            <input type="email" name="userid" class="form-control" ng-model="userid" pattern="[a-zA-Z0-9_\.\+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-\.]+"
+                title="At least one lowercase,one uppercase letter,one number is required,Special Characters -,_,.,+ are optional,only one @ is allowed,after @ one . and after . either one lowercase,one uppercase letter,one number or one special character is required, No whitespace is allowed"
+                required>
+            <span class="apperror" ng-show="form1.userid.$touched &&  form1.userid.$pristine && form1.userid.$error.required">Userid can't be Empty</span>
+            <br>
+            <span class="apperror" ng-show="form1.userid.$touched && form1.userid.$dirty && form1.userid.$error.pattern">At least one lowercase,one uppercase letter,one number is required,Special Characters -,_,.,+ are optional,only
+                one @ is allowed,after @ one . and after . either one lowercase,one uppercase letter,one number or one special
+                character is required, No whitespace is allowed</span>
+        </div>
+        <div class="form-group">
+            <label for="" translate="RegistrationUserid"></label>
+            <input type="email" name="registrationuserid" class="form-control" ng-model="registrationuserid" required pattern="[a-zA-Z0-9_\.\+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-\.]+"
+                title="At least one lowercase,one uppercase letter,one number is required,Special Characters -,_,.,+ are optional,only one @ is allowed,after @ one . and after . either one lowercase,one uppercase letter,one number or one special character is required, No whitespace is allowed">
+            <span class="apperror" ng-show="form1.registrationuserid.$touched &&  form1.registrationuserid.$pristine && form1.registrationuserid.$error.required">Userid can't be Empty</span>
+            <br>
+            <span class="apperror" ng-show="form1.registrationuserid.$touched && form1.registrationuserid.$dirty && form1.registrationuserid.$error.pattern">At least one lowercase,one uppercase letter,one number is required,Special Characters -,_,.,+ are optional,only
+                one @ is allowed,after @ one . and after . either one lowercase,one uppercase letter,one number or one special
+                character is required, No whitespace is allowed</span>
+        </div>
+        <!----------------------------------------------------Password---------------------------------------------------------------->
+        <div class="form-group">
+            <label for="" translate="OldPassword"></label>
+            <input type="password" name="oldpassword" class="form-control" ng-model="oldpassword" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                title="UpperCase, LowerCase, Number/Special Character and min 8 Characters">
+            <span class="apperror" ng-show="form1.oldpassword.$touched &&  form1.oldpassword.$pristine &&form1.oldpassword.$error.required">Password can't be Empty</span>
+            <span class="apperror" ng-show="form1.oldpassword.$touched &&  form1.oldpassword.$dirty &&form1.oldpassword.$error.pattern">UpperCase, LowerCase, Number/Special Character and min 8 Characters</span>
+        </div>
+
+        <div class="form-group">
+            <label for="" translate="Password"></label>
+            <input type="password" name="password" class="form-control" ng-model="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                title="UpperCase, LowerCase, Number/Special Character and min 8 Characters">
+            <span class="apperror" ng-show="form1.password.$touched &&  form1.password.$pristine &&form1.password.$error.required">Password can't be Empty</span>
+            <span class="apperror" ng-show="form1.password.$touched &&  form1.password.$dirty &&form1.password.$error.pattern">UpperCase, LowerCase, Number/Special Character and min 8 Characters</span>
+
+        </div>
+        <div class="form-group">
+            <label for="" translate="ReenterPassword"></label>
+            <input type="password" name="repass" class="form-control" ng-model="repass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                title="UpperCase, LowerCase, Number/Special Character and min 8 Characters" ng-match="password">{{repasserror}}
+            <span class="apperror" ng-show="form1.repass.$touched &&  form1.repass.$pristine &&form1.repass.$error.required">Password can't be Empty</span>
+            <span class="apperror" ng-show="form1.repass.$touched &&  form1.repass.$dirty &&form1.repass.$error.pattern">UpperCase, LowerCase, Number/Special Character and min 8 Characters</span>
+
+
+        </div>
+        <!----------------------------------------------------Phone No---------------------------------------------------------------->
+        <div class="form-group">
+            <label for="" translate="Phoneno">Phone no.</label>
+            <input type="text" name="phoneno" class="form-control" ng-model="phoneno" required pattern="[0-9]{10}" title="Format: +99(99)9999-9999"
+                placeholder="+99(99)9999-9999">
+            <span class="apperror" ng-show="form1.phoneno.$touched &&  form1.phoneno.$pristine && form1.phoneno.$error.required">Phone no.can't be Empty</span>
+            <span class="apperror" ng-show="form1.phoneno.$touched &&  form1.phoneno.$dirty && form1.phoneno.$error.pattern">Format: 9999999999</span>
+
+        </div>
+        <!---------------------------------------------------DOB------------------------------------------------------------------------>
+        <div class="form-group">
+            <label for="" translate="DOB"></label>
+            <input type="date" name="dob" class="form-control" ng-model="dob" pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))'
+                title="the year is numeric and starts with 19 or 20,the month is numeric and between 01-12, and the day is numeric between 01-29, or 30 if the month value is anything other than 02, or 31 if the month value is one of 01,03,05,07,08,10, or 12."
+                required>
+            <span class="apperror" ng-show="form1.dob.$touched &&  form1.dob.$pristine && form1.dob.$error.required">DOB can't be Empty</span>
+            <br>
+            <span class="apperror" ng-show="form1.dob.$touched && form1.dob.$dirty && form1.dob.$error.pattern">the year is numeric and starts with 19 or 20,the month is numeric and between 01-12, and the day is numeric between
+                01-29, or 30 if the month value is anything other than 02, or 31 if the month value is one of 01,03,05,07,08,10,
+                or 12.</span>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="pull-right">
+                    <button type="reset" class="btn btn-default" translate="Reset"></button>
+                    <button type="submit" class="btn btn-primary" translate="Submit"></button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <form method="post" name="form1" ng-submit="validate(form1)">
+        <h4 translate="Create_Account"></h4>
+        <div class="form-group">
+            <label for="" translate="Name"></label>
+            <input type="text" class="form-control" name="name" ng-model="name" required>
+            <span class="apperror" ng-show="form1.name.$touched && form1.name.$pristine && form1.name.$error.required">Name can't be Empty</span>
+        </div>
+        <div class="form-group">
+            <label for="" translate="Userid"></label>
+            <input type="email" name="userid" class="form-control" ng-model="userid" required>
+            <span class="apperror" ng-show="form1.userid.$touched &&  form1.userid.$pristine && form1.userid.$error.required">Userid can't be Empty</span>
+        </div>
+        <div class="form-group">
+            <label for="" translate="RegistrationUserid"></label>
+            <input type="email" name="registrationuserid" class="form-control" ng-model="registrationuserid" required>
+            <span class="apperror" ng-show="form1.registrationuserid.$touched &&  form1.registrationuserid.$pristine && form1.registrationuserid.$error.required">Userid can't be Empty</span>
+        </div>
+        <div class="form-group">
+            <label for="" translate="OldPassword"></label>
+            <input type="password" name="oldpassword" class="form-control" ng-model="oldpassword" required>
+            <span class="apperror" ng-show="form1.oldpassword.$touched &&  form1.oldpassword.$pristine && form1.oldpassword.$error.required">Password can't be Empty</span>
+        </div>
+        <div class="form-group">
+            <label for="" translate="Password"></label>
+            <input type="password" name="password" class="form-control" ng-model="password" required>
+            <span class="apperror" ng-show="form1.password.$touched &&  form1.password.$pristine && form1.password.$error.required">Password can't be Empty</span>
+        </div>
+        <div class="form-group">
+            <label for="" translate="ReenterPassword"></label>
+            <input type="password" name="repass" class="form-control" ng-model="repass">
+            <span class="apperror" ng-show="form1.repass.$touched &&  form1.repass.$pristine && form1.repass.$error.required">Re-enter password can't be Empty</span>
+        </div>
+        <div class="form-group">
+            <label for="" translate="Phoneno">Phone no.</label>
+            <input type="text" name="phoneno" class="form-control" ng-model="phoneno" required>
+            <span class="apperror" ng-show="form1.phoneno.$touched &&  form1.phoneno.$pristine && form1.phoneno.$error.required">Phone no.can't be Empty</span>
+        </div>
+        <div class="form-group">
+            <label for="" translate="DOB"></label>
+            <input type="date" name="dob" class="form-control" ng-model="dob" required>
+            <span class="apperror" ng-show="form1.dob.$touched &&  form1.dob.$pristine && form1.dob.$error.required">DOB can't be Empty</span>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="pull-right">
+                    <button type="reset" class="btn btn-default" translate="Reset"></button>
+                    <button type="submit" class="btn btn-primary" translate="Submit"></button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+ -->

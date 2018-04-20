@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./../../bower_components/angular/angular.min.js"></script>
+  <script src="./../../bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
+  <!-- for no html5 browsers support -->
+  <script src="./../../bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+  <!-- <script src="./bower_components/jquery/dist/jquery.min.js"></script> -->
+  <link rel="stylesheet" href="./../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./main.css">
+  <script src="../../bower_components/angular-route/angular-route.min.js"></script>
+  <script src="./../../bower_components/angular-translate/angular-translate.min.js"></script>
+  <script src="./../../js/menujs/ngStorage.min.js"></script>
+
+  <script src="./../../js/app.js"></script>
+  <script src="./../../js/config/urlconfig.js"></script>
+  <script src="./../../js/factory/indexFactory.js"></script>
+  <script src="./../../js/controller/registration/registercontroller.js"></script>
+  <script src="./../../js/controller/registration/companydetailscontroller.js"></script>
+  <script src="./../../js/controller/registration/financialdetailscontroller.js"></script>
+  <script src="./../../js/controller/registration/cardDetailsController.js"></script>
+  <script src="./../../js/controller/registration/carouselimageuploadcontroller.js"></script>
+  <script src="./../../js/controller/registration/logoImageUploadController.js"></script>
+  <script src="./../../js/controller/registration/carouselcontroller.js"></script>
+
+
+  <script src="./../../js/routes/adminRoutes.js"></script>
+</head>
+
+<body ng-app="myapp">
+  <!-- <a ng-href="#/register">Register</a>   -->
+  <ng-view></ng-view>
+</body>
+
+</html>

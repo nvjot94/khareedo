@@ -1,0 +1,77 @@
+{
+    "_id": "5a76a95e8c649c32dcc54685",
+    "name": "Electronics",
+    "description": "appliances working on electricity",
+    "specification": {
+        "purchaseprice": "",
+        "sellingprice": "",
+        "tax": ""
+    },
+    "subcategory": [
+        {
+            "name": "Phones",
+            "description": "",
+            "specification": {
+                "key1": "value1",
+                "key2": "value2"
+            },
+            "set": [
+                {
+                    "name": "Smart Phone",
+                    "decription": "",
+                    "specification": {
+                        "key1": "",
+                        "key2": ""
+                    },
+                    "product": [
+                        "productid1",
+                        "productid2"
+                    ]
+                },
+                {
+                    "name": "Feature Phone",
+                    "description": "",
+                    "specification": {
+                        "key1": "",
+                        "key2": ""
+                    },
+                    "product": [
+                        "productid3",
+                        "productid4"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Laptops",
+            "description": "",
+            "specification": {
+                "key1": "",
+                "key2": ""
+            },
+            "set": [
+                {
+                    "name": "",
+                    "description": "",
+                    "specification": {
+                        "key1": "",
+                        "key2": ""
+                    },
+                    "product": [
+                        "productid5",
+                        "productid6"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Television"
+        },
+        {
+            "name": "Refrigerator"
+        },
+        {
+            "name": "Washing Machine"
+        }
+    ]
+}

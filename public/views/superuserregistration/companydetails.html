@@ -1,0 +1,308 @@
+<form ng-controller="logoimageuploadcontroller as up" name="up.upload_form">
+  Company Logo Image Upload
+  <input type="file" ngf-select ng-model="up.file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB"
+  /> Image thumbnail:
+  <img style="width:100px;" ngf-thumbnail="up.file || '/thumb.jpg'" />
+  <i ng-show="up.upload_form.file.$error.required">*required</i>
+  <br>
+  <i ng-show="up.upload_form.file.$error.maxSize">File too large {{up.file.size / 1000000|number:1}}MB: max 20M</i>
+  <button ng-click="up.submit()">Upload</button>
+  <p>{{up.progress}}
+</form>
+
+
+
+<div class="container" ng-controller="companydetailscontroller">
+  <form name="form1" method="post" ng-submit="validate(form1)">
+    <fieldset>
+      <!-- Form Name -->
+      <h4 translate="CompanyDetails">Company Details</h4>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="NameOfCompany">Name Of Company</label>
+        <input type="text" placeholder="Name Of Company" class="form-control" name="companyname" ng-model="companyname" required>
+        <span class="apperror" ng-show="form1.companyname.$touched && form1.companyname.$pristine && form1.companyname.$error.required">Name of Company can't be Empty</span>
+      </div>
+      userid is {{userid}}
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="Description">Description</label>
+        <textarea rows="4" cols="50" placeholder="Description" class="form-control" name="description" ng-model="description" required></textarea>
+        <span class="apperror" ng-show="form1.description.$touched && form1.description.$pristine && form1.description.$error.required">Description name can't be Empty</span>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="Tagline">Tagline</label>
+        <textarea rows="4" cols="50" placeholder="Tagline" class="form-control" name="tagline" ng-model="tagline" required></textarea>
+        <span class="apperror" ng-show="form1.tagline.$touched && form1.tagline.$pristine && form1.tagline.$error.required">Tagline name can't be Empty</span>
+      </div>
+
+      <!-- Text input-->
+      <!-- <div class="form-group">
+        <label for="textinput" translate="CompanyLogo">Company Logo</label>
+        <input type="text" placeholder="Company Logo" class="form-control" name="logo" ng-model="logo">
+        <a href="#" translate="UploadPhoto">Upload Photo</a>
+      </div> -->
+
+
+
+
+
+
+
+
+
+      <div class="branch">
+        <h5 translate="AddressOfCompany">Address of Company</h5>
+        <h6 translate="BranchName">Branch Name</h6>
+        <!-- Text input -->
+        <div class="form-group">
+          <label for="textinput" translate="AddressLine1">Address Line1</label>
+          <input type="text" placeholder="Address Line1" class="form-control" name="line1" ng-model="line1" required>
+          <span class="apperror" ng-show="form1.line1.$touched && form1.line1.$pristine && form1.line1.$error.required">Address Line1 no can't be Empty</span>
+        </div>
+        <div class="form-group">
+          <label for="textinput" translate="City">City</label>
+          <input type="text" placeholder="City" class="form-control" name="city" ng-model="city" required>
+          <span class="apperror" ng-show="form1.city.$touched && form1.city.$pristine && form1.city.$error.required">City can't be Empty</span>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label for="textinput" translate="State">State</label>
+          <input type="text" placeholder="State" class="form-control" name="state" ng-model="state" required>
+          <span class="apperror" ng-show="form1.state.$touched && form1.state.$pristine && form1.state.$error.required">District can't be Empty</span>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label for="textinput" translate="Country">Country</label>
+          <input type="text" placeholder="Country" class="form-control" name="country" ng-model="country" required>
+          <span class="apperror" ng-show="form1.country.$touched && form1.country.$pristine && form1.country.$error.required">Country can't be Empty</span>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label for="textinput" translate="ZipCode">ZipCode</label>
+          <input type="text" placeholder="ZipCode" class="form-control" name="zipcode" ng-model="zipcode" required>
+          <span class="apperror" ng-show="form1.zipcode.$touched && form1.zipcode.$pristine && form1.zipcode.$error.required">ZipCode can't be Empty</span>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label for="textinput" translate="GoogleMapId">Google Map Id/Link</label>
+          <input type="text" placeholder="Google Map Id/Link" class="form-control" name="maplink" ng-model="maplink">
+        </div>
+        <div class="form-group">
+          <label for="textinput" translate="Longitude">Longitude</label>
+          <input type="text" class="form-control" placeholder="Longitude" name="longitude" ng-model="longitude">
+        </div>
+        <div class="form-group">
+          <label for="textinput" translate="Latitude">Latitude</label>
+          <input type="text" class="form-control" placeholder="Latitude" name="latitude" ng-model="latitude">
+        </div>
+      </div>
+
+      <div class="contact">
+        <h5>Contact Details</h5>
+        <div class="form-group">
+          <label for="textinput" translate="Phoneno">Phone no</label>
+          <div ng-repeat="phoneno in contacts ">
+            <input type="text" class="form-control" placeholder="Phone no" name="phoneno{{$index}}" ng-model="phoneno.number" ng-required="$first">
+            <span class="apperror" ng-show="form1.phoneno{{$index}}.$touched && form1.phoneno{{$index}}.$invalid ">Phone no can't be Empty</span>
+          </div>
+          <div>
+            <button type="button" ng-click="addContact()">add</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="textinput" translate="Officeno">Office no</label>
+          <input type="text" class="form-control" placeholder="Office no" name="officeno" ng-model="officeno">
+          <span class="apperror" ng-show="form1.officeno.$touched && form1.officeno.$pristine && form1.officeno.$error.required">Office no can't be Empty</span>
+        </div>
+        <div class="form-group">
+          <label for="textinput" translate="Emailid">Email id</label>
+          <input type="email" class="form-control" placeholder="Email id" name="emailid" ng-model="emailid">
+        </div>
+
+        <div class="form-group">
+          <label for="textinput" translate="Fax">Fax</label>
+          <input type="text" class="form-control" placeholder="Fax" name="fax" ng-model="fax">
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="pull-right">
+            <button type="reset" class="btn btn-default" translate="Reset"></button>
+            <button type="submit" class="btn btn-primary" translate="Next"></button>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+
+
+
+
+
+<!-- <div class="container">
+        <!--<h1>Result is {{result}}</h1>--<
+    <form  name="form1" action="register" method="post"  ng-submit="validate(form1)">
+           
+        <fieldset>
+
+          <!-- Form Name --<
+          <h4 translate="CompanyDetails">Company Details</h4>
+
+          <!-- Text input--<
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" translate="NameOfCompany">Name Of Company</label>
+              <input type="text" placeholder="Name Of Company" class="form-control"  name="companyname" ng-model="companyname"  required >
+              <span class="apperror"  ng-show="form1.companyname.$touched && form1.companyname.$pristine && form1.companyname.$error.required">Name of Company can't be Empty</span>
+            </div>
+
+          <!-- Text input--<
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" translate="Description">Description</label>
+            <textarea rows="4" cols="50" placeholder="Description" class="form-control" name="description" ng-model="description" required></textarea>
+              <span class="apperror"  ng-show="form1.description.$touched && form1.description.$pristine && form1.description.$error.required">Description name can't be Empty</span>
+          </div>
+
+          <!-- Text input--<
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" translate="Tagline">Tagline</label>
+            <textarea rows="4" cols="50" placeholder="Tagline" class="form-control" name="tagline" ng-model="tagline" required></textarea>
+              <span class="apperror"  ng-show="form1.tagline.$touched && form1.tagline.$pristine && form1.tagline.$error.required">Tagline name can't be Empty</span>
+          </div>
+
+          <!-- Text input--<
+          <div class="form-group">
+            <label for="textinput" translate="CompanyLogo">Company Logo</label>
+              <input type="text" placeholder="Company Logo" class="form-control" name="logo" ng-model="logo">
+              <a href="#" translate="UploadPhoto">Upload Photo</a>
+              <!--<span class="apperror"  ng-show="form1.logo.$touched && form1.logo.$pristine && form1.logo.$error.required"> Logo can't be Empty</span>--<
+          </div>
+
+            <div class="branch">
+             <h5 translate="AddressOfCompany">Address of Company</h5>
+             <h6 translate="BranchName">Branch Name</h6>
+            <!-- Text input --<
+            <div class="form-group">
+            <label  for="textinput" translate="AddressLine1">Address Line1</label>
+              <input type="text" placeholder="Address Line1" class="form-control" name="line1" ng-model="line1" required>
+              <span class="apperror"  ng-show="form1.line1.$touched && form1.line1.$pristine && form1.line1.$error.required">Address Line1 no can't be Empty</span>
+          </div>
+
+
+
+          <!-- Text input--<
+          <div class="form-group">
+            <label for="textinput" translate="AddressLine2">Address Line2</label>
+              <input type="text" placeholder="Address Line2" class="form-control" name="line2" ng-model="line2">
+              <!--<span class="apperror"  ng-show="form1.line2.$touched && form1.line2.$pristine && form1.line2.$error.required">Address Line1 can't be Empty</span>--<
+          </div>
+              
+                <!-- Text input--<
+          <div class="form-group">
+                <label for="textinput" translate="City">City</label>
+                  <input type="text" placeholder="City" class="form-control" name="city" ng-model="city" required>
+                  <span class="apperror"  ng-show="form1.city.$touched && form1.city.$pristine && form1.city.$error.required">City can't be Empty</span>
+              </div>
+
+              
+                <!-- Text input--<
+          <div class="form-group">
+                <label for="textinput" translate="State">State</label>
+                  <input type="text" placeholder="State" class="form-control" name="state" ng-model="state" required>
+                  <span class="apperror"  ng-show="form1.state.$touched && form1.state.$pristine && form1.state.$error.required">District can't be Empty</span>
+              </div>
+
+              
+                <!-- Text input--<
+          <div class="form-group">
+                <label for="textinput" translate="Country">Country</label>
+                  <input type="text" placeholder="Country" class="form-control" name="country" ng-model="country" required>
+                  <span class="apperror"  ng-show="form1.country.$touched && form1.country.$pristine && form1.country.$error.required">Country can't be Empty</span>
+              </div>
+
+                    <!-- Text input--<
+          <div class="form-group">
+                <label for="textinput" translate="ZipCode">ZipCode</label>
+                  <input type="text" placeholder="ZipCode" class="form-control" name="zipcode" ng-model="zipcode" required>
+                  <span class="apperror"  ng-show="form1.zipcode.$touched && form1.zipcode.$pristine && form1.zipcode.$error.required">ZipCode can't be Empty</span>
+              </div>
+
+                    <!-- Text input--<
+          <div class="form-group">
+                <label for="textinput" translate="GoogleMapId">Google Map Id/Link</label>
+                  <input type="text" placeholder="Google Map Id/Link" class="form-control" name="maplink" ng-model="maplink">
+                 <!-- <span class="apperror"  ng-show="form1.maplink.$touched && form1.maplink.$pristine && form1.maplink.$error.required">Google Map Id/Link can't be Empty</span>--<
+              </div>
+
+                <div class="form-group">
+                        <label  for="textinput" translate="Longitude">Longitude</label>
+                          <input type="text" class="form-control" placeholder="Longitude" name="longitude" ng-model="longitude">
+                          <!--<span class="apperror"  ng-show="form1.officeno.$touched && form1.officeno.$pristine && form1.officeno.$error.required">Office no can't be Empty</span>--<
+                        </div> 
+
+                        
+              <div class="form-group">
+                <label  for="textinput" translate="Latitude">Latitude</label>
+                  <input type="text" class="form-control" placeholder="Latitude" name="latitude" ng-model="latitude">
+                  <!--<span class="apperror"  ng-show="form1.officeno.$touched && form1.officeno.$pristine && form1.officeno.$error.required">Office no can't be Empty</span>--<
+                </div> 
+
+
+        </div>
+
+        <div class="contact">
+            <h5>Contact Details</h5>
+           <div class="form-group">
+            <label  for="textinput" translate="Phoneno">Phone no</label>
+             <!-- <input type="text" class="form-control" placeholder="Phone no" name="phoneno.number" ng-model="phoneno.number" required>--<
+              
+                <div ng-repeat="phoneno in contacts">
+                  <input type="text"  class="form-control" placeholder="Phone no" name="phoneno.number" ng-model="phoneno.number">
+                  <span class="apperror"  ng-show="form1.phoneno.number.$touched && form1.phoneno.number.$pristine && form1.phoneno.number.$error.required">Phone no can't be Empty</span>    
+                </div>
+                <div>
+                  <button type="button" ng-click="addContact()">add</button>
+                </div>
+              
+            </div>
+        
+            
+           <div class="form-group">
+                <label  for="textinput" translate="Officeno">Office no</label>
+                  <input type="text" class="form-control" placeholder="Office no" name="officeno" ng-model="officeno">
+                  <span class="apperror"  ng-show="form1.officeno.$touched && form1.officeno.$pristine && form1.officeno.$error.required">Office no can't be Empty</span>
+                </div>
+                   
+                 <div class="form-group">
+                    <label  for="textinput" translate="Emailid">Email id</label>
+                     <input type="email" class="form-control" placeholder="Email id" name="emailid" ng-model="emailid">
+                         <!--<span class="apperror"  ng-show="form1.email.$touched && form1.email.$pristine && form1.email.$error.required">Email-id can't be Empty</span>--<
+                           </div> 
+
+                           <div class="form-group">
+                            <label  for="textinput" translate="Fax">Fax</label>
+                             <input type="email" class="form-control" placeholder="Fax" name="fax" ng-model="fax" >
+                                <!-- <span class="apperror"  ng-show="form1.fax.$touched && form1.fax.$pristine && form1.fax.$error.required">Fax can't be Empty</span>--<
+                                   </div> 
+
+        </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+                <button type="reset" class="btn btn-default" ng-click="clear()">Reset</button>
+                <button type="submit" class="btn btn-primary" ng-click="next()">Next</button>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+    </div><!-- /.col-lg-12 --<
+</div><!-- /.row --< -->

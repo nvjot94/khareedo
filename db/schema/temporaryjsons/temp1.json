@@ -1,0 +1,426 @@
+
+{
+    "_id": "5a76a95e8c649c32dcc54685",
+    "name": "Electronics",
+    "description": "appliances working on electricity",
+    "specification": {
+        "purchaseprice": "",
+        "sellingprice": "",
+        "tax": ""
+    },
+    "subcategory": [
+        {
+            "name": "Phones",
+            "description": "",
+            "specification": {
+                "key1": "value1",
+                "key2": "value2"
+            },
+            "set": [
+                {
+                    "name": "Smart Phone",
+                    "decription": "",
+                    "specification": {
+                        "key1": "",
+                        "key2": ""
+                    },
+                    "product": [
+                        "productid1",
+                        "productid2"
+                    ]
+                },
+                {
+                    "name": "Feature Phone",
+                    "description": "",
+                    "specification": {
+                        "key1": "",
+                        "key2": ""
+                    },
+                    "product": [
+                        "productid3",
+                        "productid4"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Laptops",
+            "description": "",
+            "specification": {
+                "key1": "",
+                "key2": ""
+            },
+            "set": [
+                {
+                    "name": "",
+                    "description": "",
+                    "specification": {
+                        "key1": "",
+                        "key2": ""
+                    },
+                    "product": [
+                        "productid5",
+                        "productid6"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+
+
+
+
+{
+    "_id": "5a76ae748c649c32dcc54686",
+    "name": "clothing",
+    "description": "wearable type",
+    "specification": {
+        "purchaseprice": "",
+        "sellingprice": "",
+        "tax": ""
+    },
+    "subcategory": [
+        {
+            "name": "mens",
+            "description": "",
+            "specification": {
+                "key1": "value1",
+                "key2": "value2"
+            },
+            "set": [
+                {
+                    "name": "shirts",
+                    "decription": "",
+                    "specification": {
+                        "key1": "",
+                        "key2": ""
+                    },
+                    "product": [
+                        "productid1",
+                        "productid2"
+                    ]
+                },
+                {
+                    "name": "trousers",
+                    "description": "",
+                    "specification": {
+                        "key1": "",
+                        "key2": ""
+                    },
+                    "product": [
+                        "productid3",
+                        "productid4"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "women",
+            "description": "",
+            "specification": {
+                "key1": "",
+                "key2": ""
+            },
+            "set": [
+                {
+                    "name": "",
+                    "description": "",
+                    "specification": {
+                        "key1": "",
+                        "key2": ""
+                    },
+                    "product": [
+                        "productid5",
+                        "productid6"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+
+
+
+
+clientdetails json
+{
+    "_id": "5a76a0a28c649c32dcc54684",
+    "name": "",
+    "email": "",
+    "password": "",
+    "forgotpasswordcode": "",
+    "forgotpasswordcodegenerationtime": "1999-12-31T18:30:00.000Z",
+    "phone": "",
+    "alternatephone": "",
+    "address": {
+        "line1": "",
+        "line2": "",
+        "state": "",
+        "city": "",
+        "country": "",
+        "zipcode": ""
+    },
+    "dateofbirth": "1999-12-31T18:30:00.000Z",
+    "status": "",
+    "orders": [
+        "orderid1",
+        "orderid2"
+    ],
+    "products": [
+        "productid1",
+        "productid2"
+    ],
+    "financialdetails": {
+        "bankingdetails": {
+            "accountnumber": "",
+            "accountholdername": "",
+            "accounttype": "",
+            "bankname": "",
+            "bankbranch": "",
+            "ifsccode": ""
+        },
+        "carddetails": {
+            "cardtype": "",
+            "cardnumber": "",
+            "cardholdername": "",
+            "expirydate": "1999-12-31T18:30:00.000Z",
+            "cvv": "",
+            "cardprovider": "",
+            "bankname": "",
+            "branchname": ""
+        }
+    }
+}
+
+
+
+
+
+companydetails
+{
+    "_id": "5a76995b8c649c32dcc54681",
+    "name": "",
+    "description": "",
+    "logo": "",
+    "address": {
+        "line1": "",
+        "line2": "",
+        "city": "",
+        "state": "",
+        "country": "",
+        "zipcode": "",
+        "maplink": "",
+        "latitude": "",
+        "longitude": "",
+        "contactdetails": {
+            "mobile": [
+                ""
+            ],
+            "office": [
+                ""
+            ],
+            "fax": [
+                ""
+            ],
+            "email": [
+                ""
+            ]
+        }
+    },
+    "tagline": "",
+    "superuser": {
+        "name": "",
+        "phone": "",
+        "email": "",
+        "password": "",
+        "dateofbirth": ""
+    },
+    "financialdetails": {
+        "accountnumber": "",
+        "accounttype": "",
+        "holdername": "",
+        "bankname": "",
+        "branchname": "",
+        "ifsccode": ""
+    },
+    "carddetails": {
+        "cardtype": "",
+        "cardno": "",
+        "holdername": "",
+        "expirydate": "",
+        "cvv": "",
+        "cardprovider": "",
+        "bankname": "",
+        "branchname": "",
+        "ifsccode": ""
+    }
+}
+
+
+
+
+
+
+orders
+{
+    "_id": "5a76c25720716f4cec01de58",
+    "orderid": "",
+    "date": "",
+    "products": [
+        {
+            "productid": "id1",
+            "name": "",
+            "shortdescription": "",
+            "quantity": "",
+            "sellingprice": "",
+            "mrp": "",
+            "tax": ""
+        }
+    ],
+    "deliverycharges": "",
+    "deliverydate": "",
+    "promotion": "",
+    "amount": "",
+    "deliveryaddress": "",
+    "status": "",
+    "clientdetails": {
+        "clientid": "",
+        "name": "",
+        "phone": "",
+        "alternatephone": ""
+    },
+    "location": [
+        {
+            "date": "1999-12-31T18:30:00.000Z",
+            "desc": ""
+        }
+    ],
+    "adminemail": "",
+    "confirmationdate": "1999-12-31T18:30:00.000Z"
+}
+
+
+
+
+
+products
+{
+    "_id": "5a76b7618c649c32dcc54689",
+    "productid": "",
+    "name": "",
+    "shortdescription": "",
+    "stock": "",
+    "status": "",
+    "category": "",
+    "subcategory": "",
+    "set": "",
+    "variants": [
+        "productid2",
+        "productid3"
+    ],
+    "purchaseprice": "",
+    "sellingprice": "",
+    "mrp": "",
+    "tax": "",
+    "description": "",
+    "images": [
+        "imageurl1",
+        "imageurl2",
+        "imageurl3"
+    ],
+    "maximumquantitylimit": "",
+    "specification": {
+        "key1": "",
+        "key2": "",
+        "key3": ""
+    },
+    "averagerating": "",
+    "creationdate": "1999-12-31T18:30:00.000Z",
+    "modificationdate": "1999-12-31T18:30:00.000Z",
+    "reviews": [
+        {
+            "rating": "",
+            "review": "",
+            "description": "",
+            "by": "",
+            "time": "1999-12-31T18:30:00.000Z"
+        },
+        {
+            "rating": "",
+            "review": "",
+            "description": "",
+            "by": "",
+            "time": "1999-12-31T18:30:00.000Z"
+        }
+    ],
+    "faq": [
+        {
+            "question": "",
+            "by": "",
+            "time": "1999-12-31T18:30:00.000Z",
+            "upvote": "",
+            "downvote": "",
+            "answers": [
+                {
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z",
+                    "description": ""
+                }
+            ]
+        }
+    ]
+}
+
+
+
+
+
+userdetails
+{
+    "_id": "5a76af878c649c32dcc54687",
+    "adminid": "",
+    "name": "",
+    "dateofbirth": "",
+    "dateofjoining": "",
+    "nickname": "",
+    "designation": "",
+    "email": "",
+    "password": "",
+    "forgotpasswordcode": "",
+    "forgotpasswordcodegenerationtime": "1999-12-31T18:30:00.000Z",
+    "phone": [
+        "phone1",
+        "phone2"
+    ],
+    "status": "",
+    "salary": "",
+    "photo": "",
+    "orders": [
+        "orderid1",
+        "orderid2",
+        "orderid3"
+    ],
+    "sales": {
+        "weekly": "",
+        "monthly": "",
+        "quarterly": "",
+        "annually": "",
+        "totalsales": ""
+    }
+}
+
+
+
+
+
+
+
+websiteregistrations
+{
+    "_id": "5a7698908c649c32dcc54680",
+    "registrationstatus": false,
+    "registrationdate": "1999-12-31T18:30:00.000Z"
+}

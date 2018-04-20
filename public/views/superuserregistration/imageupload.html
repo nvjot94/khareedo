@@ -1,0 +1,31 @@
+<div id="container">
+
+  <form ng-controller="carouselimageuploadcontroller as up" name="up.upload_form">
+    Carousel Image Upload
+    <input type="file" ngf-select ng-model="up.file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB"
+    /> Image thumbnail:
+    <img style="width:100px;" ngf-thumbnail="up.file || '/thumb.jpg'" />
+    <i ng-show="up.upload_form.file.$error.required">*required</i>
+    <br>
+    <i ng-show="up.upload_form.file.$error.maxSize">File too large {{up.file.size / 1000000|number:1}}MB: max 20M</i>
+    <button type="submit" ng-click="up.submit()">Upload</button>
+    <p>{{up.progress}}
+  </form>
+</div>
+<div ng-controller="carouselcontroller">
+  <button ng-click="finish()">Save</button>
+</div>
+<!-- 
+<div id="container">
+  <form ng-controller="logoimageuploadcontroller as up" name="up.upload_form">
+    Carousel Image Upload
+    <input type="file" ngf-select ng-model="up.file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB"
+    /> Image thumbnail:
+    <img style="width:100px;" ngf-thumbnail="up.file || '/thumb.jpg'" />
+    <i ng-show="up.upload_form.file.$error.required">*required</i>
+    <br>
+    <i ng-show="up.upload_form.file.$error.maxSize">File too large {{up.file.size / 1000000|number:1}}MB: max 20M</i>
+    <button type="submit" ng-click="up.submit()">submit</button>
+    <p>{{up.progress}}
+  </form>
+</div> -->

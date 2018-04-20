@@ -1,0 +1,93 @@
+<div class="container">
+  <!--<h1>Result is {{result}}</h1>-->
+  <form name="form1" method="post" novalidate ng-submit="validate(form1)">
+
+    <fieldset>
+
+      <!-- Form Name -->
+      <h4 translate="CardDetails">Card Details</h4>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="CardNo"></label>
+        <input type="text" placeholder="Account No" class="form-control" name="cardno" ng-model="cardno" required>
+        <span class="apperror" ng-show="form1.cardno.$touched && form1.cardno.$pristine && form1.cardno.$error.required">Card no can't be Empty</span>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="CardHolderName"> </label>
+        <input type="text" placeholder="Card Holder Name" class="form-control" name="cardholdername" ng-model="cardholdername" required>
+        <span class="apperror" ng-show="form1.cardholdername.$touched && form1.cardholdername.$pristine && form1.cardholdername.$error.required">Card Holder Name can't be Empty</span>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="CVV"> </label>
+        <input type="text" placeholder="CVV" class="form-control" name="cvv" ng-model="cvv" required>
+        <span class="apperror" ng-show="form1.cvv.$touched && form1.cvv.$pristine && form1.cvv.$error.required">CVV can't be Empty</span>
+      </div>
+      <!-- Text input-->
+      <div class="form-group">
+        <label for="textinput" translate="CardType"></label>
+        <select class="form-control" name="cardtype" ng-model="cardtype" required>
+          <option value=""></option>
+          <option value="Credit Card">Credit Card</option>
+          <option value="Debit Card">Debit Card</option>
+          <span class="apperror" ng-show="form1.cardtype.$touched && form1.cardtype.$pristine && form1.cardtype.$error.required">Card Type Name can't be Empty</span>
+      </div>
+
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label for="textinput" translate="ExpiryDate"></label>
+        <input type="date" placeholder="Expiry Date" class="form-control" name="expirydate" ng-model="expirydate" required>
+        <span class="apperror" ng-show="form1.expirydate.$touched && form1.expirydate.$pristine && form1.expirydate.$error.required">Expiry Date can't be Empty</span>
+      </div>
+
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label for="textinput" translate="CardProvider"></label>
+        <select class="form-control" name="cardprovider" ng-model="cardprovider" required>
+          <option value=""></option>
+          <option value="Visa">Visa</option>
+          <option value="Rupay">Rupay</option>
+          <option value="Maestro">Maestro</option>
+          <option value="American Express">American Express</option>
+          <span class="apperror" ng-show="form1.cardprovider.$touched && form1.cardprovider.$pristine && form1.cardprovider.$error.required">Card Provider can't be Empty</span>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label for="textinput" translate="Bank"></label>
+        <input type="text" placeholder="Bank" class="form-control" name="bank" ng-model="bank" required>
+        <span class="apperror" ng-show="form1.bank.$touched && form1.bank.$pristine && form1.bank.$error.required">Bank Name can't be Empty</span>
+      </div>
+
+
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label for="textinput" translate="Branch"></label>
+        <input type="text" placeholder="Branch" class="form-control" name="branch" ng-model="branch" required>
+        <span class="apperror" ng-show="form1.branch.$touched && form1.branch.$pristine && form1.branch.$error.required">Branch can't be Empty</span>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="pull-right">
+            <button type="reset" class="btn btn-default" translate="Reset">Reset</button>
+            <button type="submit" class="btn btn-primary" translate="Next">Next</button>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+<!-- /.col-lg-12 -->
+<!-- /.row -->
+
+<!-- </body>
+</html> -->

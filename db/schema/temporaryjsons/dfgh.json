@@ -1,0 +1,108 @@
+[
+    {
+        "category": "Clothes",
+        "desc": "This is Clothings category",
+        "fields": [
+            {
+                "field": "price"
+            },
+            {
+                "field": "rating"
+            }
+        ],
+        "subcategories": [
+            {
+                "subcategory": "Shirt",
+                "sets": []
+            },
+            {
+                "subcategory": "Jean",
+                "sets": []
+            }
+        ]
+    },
+    {
+        "category": "Electronics",
+        "fields": [
+            {
+                "field": "name"
+            },
+            {
+                "field": "price"
+            },
+            {
+                "field": "mrp"
+            },
+            {
+                "field": "discount"
+            },
+            {
+                "field": "stock"
+            },
+            {
+                "field": "status"
+            },
+            {
+                "field": "power rating"
+            },
+            {
+                "field": "input voltage"
+            }
+        ],
+        "desc": "works on electricity",
+        "subcategories": [
+            {
+                "subcategory": "Mobiles",
+                "sets": [
+                    {
+                        "set": "",
+                        "field": "memory"
+                    },
+                    {
+                        "set": "",
+                        "field": "colour"
+                    }
+                ]
+            },
+            {
+                "subcategory": "Laptops",
+                "sets": [
+                    {
+                        "set": "",
+                        "field": "hdd"
+                    },
+                    {
+                        "set": "",
+                        "field": "ram"
+                    }
+                ]
+            },
+            {
+                "subcategory": "Television",
+                "sets": [
+                    {
+                        "set": "",
+                        "field": "size"
+                    },
+                    {
+                        "set": "",
+                        "field": "thickness"
+                    }
+                ]
+            },
+            {
+                "subcategory": "Refrigertators",
+                "sets": [
+                    {
+                        "set": "",
+                        "field": "capacity"
+                    },
+                    {
+                        "set": "",
+                        "field": "cooling"
+                    }
+                ]
+            }
+        ]
+    }
+]

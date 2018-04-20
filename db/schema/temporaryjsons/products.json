@@ -1,0 +1,79 @@
+{
+    "_id": "5a76b7618c649c32dcc54689",
+    "productid": "",
+    "name": "",
+    "shortdescription": "",
+    "stock": "",
+    "status": "",
+    "category": "",
+    "subcategory": "",
+    "set": "",
+    "variants": [
+        "productid2",
+        "productid3"
+    ],
+    "purchaseprice": "",
+    "sellingprice": "",
+    "mrp": "",
+    "tax": "",
+    "description": "",
+    "images": [
+        "imageurl1",
+        "imageurl2",
+        "imageurl3"
+    ],
+    "maximumquantitylimit": "",
+    "specification": [
+        {
+            "keyname": "key1",
+            "value": "value1"
+        },
+        {
+            "keyname": "key2",
+            "value": "value2"
+        },
+        {
+            "keyname": "key3",
+            "value": "value2"
+        },
+        {
+            "keyname": "key4",
+            "value": "value4"
+        }
+    ],
+    "averagerating": "",
+    "creationdate": "1999-12-31T18:30:00.000Z",
+    "modificationdate": "1999-12-31T18:30:00.000Z",
+    "reviews": [
+        {
+            "rating": "",
+            "review": "",
+            "description": "",
+            "by": "",
+            "time": "1999-12-31T18:30:00.000Z"
+        },
+        {
+            "rating": "",
+            "review": "",
+            "description": "",
+            "by": "",
+            "time": "1999-12-31T18:30:00.000Z"
+        }
+    ],
+    "faq": [
+        {
+            "question": "",
+            "by": "",
+            "time": "1999-12-31T18:30:00.000Z",
+            "upvote": "",
+            "downvote": "",
+            "answers": [
+                {
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z",
+                    "description": ""
+                }
+            ]
+        }
+    ]
+}
